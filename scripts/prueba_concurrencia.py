@@ -1,4 +1,4 @@
-"""Prueba de concurrencia y de tiempos de respuesta contra nodos reales (procesos uvicorn en localhost).
+﻿"""Prueba de concurrencia y de tiempos de respuesta contra nodos reales (procesos uvicorn en localhost).
 
 Envía muchas solicitudes a la vez y comprueba que ninguna mezcla resultados: la suma de filas y de ingresos de todas las
 respuestas debe ser igual a la verdad. Guarda evidencias/concurrencia.json.
@@ -228,9 +228,10 @@ def main() -> int:
     destino.write_text(
         json.dumps(salida, ensure_ascii=False, indent=1) + "\n", encoding="utf-8"
     )
-    print("Guardado en", destino)
+    print("Guardado en", destino.relative_to(RAIZ))
     return 0 if all(r["correcto"] for r in salida["procesar"]) else 1
 
 
 if __name__ == "__main__":
     sys.exit(main())
+

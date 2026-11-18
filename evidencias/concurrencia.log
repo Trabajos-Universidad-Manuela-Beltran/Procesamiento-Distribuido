@@ -1,9 +1,0 @@
-1 nodo(s), 8 solicitudes a la vez: 3.30 s, latencia mediana 2.29 s, máxima 3.30 s, 151.373 filas/s, correcto=True
-1 nodo(s), 32 solicitudes a la vez: 5.35 s, latencia mediana 4.14 s, máxima 4.83 s, 93.461 filas/s, correcto=True
-4 nodo(s), 8 solicitudes a la vez: 2.06 s, latencia mediana 1.82 s, máxima 2.06 s, 242.465 filas/s, correcto=True
-4 nodo(s), 32 solicitudes a la vez: 4.39 s, latencia mediana 3.50 s, máxima 4.37 s, 113.902 filas/s, correcto=True
-4 nodo(s), 64 solicitudes a la vez: 7.63 s, latencia mediana 6.75 s, máxima 7.44 s, 65.540 filas/s, correcto=True
-/salud, 1 hilos: 307 solicitudes/s, mediana 2.1 ms, p95 3.1 ms, fallos 0
-/salud, 10 hilos: 268 solicitudes/s, mediana 9.2 ms, p95 16.0 ms, fallos 0
-/salud, 50 hilos: 94 solicitudes/s, mediana 6.2 ms, p95 24.6 ms, fallos 0
-Guardado en C:\Users\cuent\Documents\Universidad\Katherin\2026-02\Sistemas Distribuidos\Guia 9 S14\procesamiento-distribuido\evidencias\concurrencia.json

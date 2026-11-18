@@ -1,4 +1,5 @@
 # Clúster de 6 nodos trabajadores en una sola máquina (cada contenedor limitado a 1 CPU).
+name: procdist
 # Los puertos solo escuchan en localhost; los datos se montan en modo lectura.
 x-nodo: &nodo
   build:
