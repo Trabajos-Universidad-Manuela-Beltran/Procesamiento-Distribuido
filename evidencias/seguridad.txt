@@ -1,7 +1,7 @@
-bandit 1.9.4: bandit -r procdist cluster scripts datos (sin tests), 1319 líneas
-  Severidad: 0 alta, 0 media, 14 baja
+bandit 1.9.4: bandit -r procdist cluster scripts datos (sin tests), 1626 líneas
+  Severidad: 0 alta, 0 media, 21 baja
   B311 (1 hallazgo): random en el generador de datos sintéticos; no se usa para seguridad.
-  B404, B603 y B607 (8 hallazgos): scripts de medición que llaman a powershell y docker con argumentos fijos, sin entrada del usuario.
+  B404, B603 y B607 (15 hallazgos): scripts de medición, de concurrencia y de captura que llaman a powershell, docker, conhost y uvicorn con argumentos fijos, sin entrada del usuario.
   B101 (5 hallazgos): assert en los scripts de medición para comprobar que los resultados coinciden con la verdad.
 
 pip-audit 2.10.1: pip-audit -r requirements.txt
