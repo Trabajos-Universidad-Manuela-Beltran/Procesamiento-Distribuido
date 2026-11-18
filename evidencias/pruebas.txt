@@ -1,0 +1,66 @@
+============================= test session starts =============================
+platform win32 -- Python 3.14.3, pytest-8.3.4, pluggy-1.7.0 -- C:\Users\cuent\Documents\Universidad\Katherin\2026-02\Sistemas Distribuidos\Guia 9 S14\procesamiento-distribuido\.venv\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\cuent\Documents\Universidad\Katherin\2026-02\Sistemas Distribuidos\Guia 9 S14\procesamiento-distribuido
+plugins: anyio-4.16.0, platformdirs-4.14.5, cov-6.0.0
+collecting ... collected 32 items
+
+tests/test_coordinador.py::test_el_coordinador_reparte_y_consolida_con_el_mismo_resultado_que_la_verdad PASSED [  3%]
+tests/test_coordinador.py::test_si_un_nodo_cae_el_coordinador_reasigna_y_el_resultado_sigue_correcto PASSED [  6%]
+tests/test_coordinador.py::test_sin_reintentos_la_particion_se_pierde_y_la_comprobacion_lo_detecta PASSED [  9%]
+tests/test_coordinador.py::test_un_solo_nodo_que_cae_deja_las_particiones_pendientes_como_perdidas_y_lo_informa PASSED [ 12%]
+tests/test_coordinador.py::test_un_dato_malo_pierde_su_particion_pero_no_marca_nodos_como_caidos PASSED [ 15%]
+tests/test_coordinador.py::test_pedir_cero_particiones_o_cero_nodos_es_un_error_claro PASSED [ 18%]
+tests/test_coordinador.py::test_un_archivo_que_no_existe_falla_con_404 PASSED [ 21%]
+tests/test_procesamiento.py::test_las_particiones_cubren_el_archivo_sin_huecos PASSED [ 25%]
+tests/test_procesamiento.py::test_ninguna_fila_se_pierde_ni_se_repite_con_cualquier_numero_de_particiones[1] PASSED [ 28%]
+tests/test_procesamiento.py::test_ninguna_fila_se_pierde_ni_se_repite_con_cualquier_numero_de_particiones[2] PASSED [ 31%]
+tests/test_procesamiento.py::test_ninguna_fila_se_pierde_ni_se_repite_con_cualquier_numero_de_particiones[3] PASSED [ 34%]
+tests/test_procesamiento.py::test_ninguna_fila_se_pierde_ni_se_repite_con_cualquier_numero_de_particiones[5] PASSED [ 37%]
+tests/test_procesamiento.py::test_ninguna_fila_se_pierde_ni_se_repite_con_cualquier_numero_de_particiones[8] PASSED [ 40%]
+tests/test_procesamiento.py::test_ninguna_fila_se_pierde_ni_se_repite_con_cualquier_numero_de_particiones[13] PASSED [ 43%]
+tests/test_procesamiento.py::test_ninguna_fila_se_pierde_ni_se_repite_con_cualquier_numero_de_particiones[64] PASSED [ 46%]
+tests/test_procesamiento.py::test_secuencial_coincide_con_la_verdad PASSED [ 50%]
+tests/test_procesamiento.py::test_paralelo_da_el_mismo_resultado_que_el_secuencial PASSED [ 53%]
+tests/test_procesamiento.py::test_falla_con_reintento_sigue_siendo_correcta PASSED [ 56%]
+tests/test_procesamiento.py::test_falla_sin_reintento_se_detecta_porque_faltan_filas PASSED [ 59%]
+tests/test_procesamiento.py::test_la_verdad_guardada_se_puede_leer_de_disco PASSED [ 62%]
+tests/test_procesamiento.py::test_pedir_mas_particiones_que_bytes_no_genera_rangos_vacios PASSED [ 65%]
+tests/test_spark.py::test_spark_local_calcula_lo_mismo_que_la_verdad PASSED [ 68%]
+tests/test_trabajador.py::test_el_nodo_responde_su_estado PASSED         [ 71%]
+tests/test_trabajador.py::test_devuelve_el_tamano_del_archivo PASSED     [ 75%]
+tests/test_trabajador.py::test_procesa_un_rango_y_suma_las_filas_de_todas_las_particiones PASSED [ 78%]
+tests/test_trabajador.py::test_rechaza_nombres_de_archivo_con_rutas_o_extensiones_raras[../secreto.csv] PASSED [ 81%]
+tests/test_trabajador.py::test_rechaza_nombres_de_archivo_con_rutas_o_extensiones_raras[..\\secreto.csv] PASSED [ 84%]
+tests/test_trabajador.py::test_rechaza_nombres_de_archivo_con_rutas_o_extensiones_raras[datos.txt] PASSED [ 87%]
+tests/test_trabajador.py::test_rechaza_nombres_de_archivo_con_rutas_o_extensiones_raras[a/b.csv] PASSED [ 90%]
+tests/test_trabajador.py::test_archivo_inexistente_da_404_y_rango_invertido_da_422 PASSED [ 93%]
+tests/test_trabajador.py::test_la_caida_simulada_se_rechaza_si_el_nodo_no_la_habilita PASSED [ 96%]
+tests/test_trabajador.py::test_rechaza_desplazamientos_enormes PASSED    [100%]
+
+============================== warnings summary ===============================
+.venv\Lib\site-packages\fastapi\testclient.py:1
+  C:\Users\cuent\Documents\Universidad\Katherin\2026-02\Sistemas Distribuidos\Guia 9 S14\procesamiento-distribuido\.venv\Lib\site-packages\fastapi\testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.
+    from starlette.testclient import TestClient as TestClient  # noqa
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+
+---------- coverage: platform win32, python 3.14.3-final-0 -----------
+Name                         Stmts   Miss  Cover   Missing
+----------------------------------------------------------
+cluster\coordinador.py         107     21    80%   59-60, 114, 132, 175-203
+cluster\trabajador.py           43      1    98%   73
+procdist\__init__.py             0      0   100%
+procdist\ejecutores.py          50      0   100%
+procdist\nucleo.py              60      2    97%   47, 75
+procdist\spark_ejecutor.py      21      0   100%
+----------------------------------------------------------
+TOTAL                          281     24    91%
+
+================== 32 passed, 1 warning in 176.21s (0:02:56) ==================
+CORRECTO: el proceso con PID 37004 (proceso secundario de PID 9676)
+ha sido terminado.
+CORRECTO: el proceso con PID 9676 (proceso secundario de PID 44704)
+ha sido terminado.
+CORRECTO: el proceso con PID 44704 (proceso secundario de PID 4660)
+ha sido terminado.

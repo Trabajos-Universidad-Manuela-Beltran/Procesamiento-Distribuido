@@ -1,0 +1,42 @@
+WARNING: Using incubator modules: jdk.incubator.vector
+26/11/15 10:27:03 WARN Shell: Did not find winutils.exe: java.io.FileNotFoundException: java.io.FileNotFoundException: HADOOP_HOME and hadoop.home.dir are unset. -see https://cwiki.apache.org/confluence/display/HADOOP2/WindowsProblems
+Using Spark's default log4j profile: org/apache/spark/log4j2-defaults.properties
+Setting default log level to "WARN".
+To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+26/11/15 10:27:04 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+{'cpu': 'Intel(R) Core(TM) i7-9750H CPU @ 2.60GHz', 'nucleos_fisicos': '6', 'procesadores_logicos': 12, 'ram_gib': 15.8, 'sistema': 'Windows 11 (10.0.26200)', 'python': '3.14.3'}
+Tamaño 10k
+  ventas_10k.csv p=2: arranque 1.351 s, caliente 0.063 s
+  ventas_10k.csv p=4: arranque 1.640 s, caliente 0.039 s
+  ventas_10k.csv p=6: arranque 1.550 s, caliente 0.034 s
+  ventas_10k.csv p=12: arranque 1.827 s, caliente 0.031 s
+[Stage 0:>                                                          (0 + 1) / 1]                                                                                [Stage 1:>                                                          (0 + 1) / 1]                                                                                [Stage 5:>                                                          (0 + 1) / 1]                                                                                  ventas_10k.csv spark: 3.071 s
+  ventas_10k.csv secuencial: 0.087 s
+Tamaño 100k
+  ventas_100k.csv p=2: arranque 1.742 s, caliente 0.600 s
+  ventas_100k.csv p=4: arranque 1.797 s, caliente 0.331 s
+  ventas_100k.csv p=6: arranque 1.802 s, caliente 0.234 s
+  ventas_100k.csv p=12: arranque 3.202 s, caliente 0.238 s
+[Stage 41:>                                                         (0 + 2) / 2][Stage 41:=============================>                            (1 + 1) / 2]                                                                                  ventas_100k.csv spark: 1.954 s
+  ventas_100k.csv secuencial: 0.846 s
+Tamaño 500k
+  ventas_500k.csv p=2: arranque 3.604 s, caliente 2.316 s
+  ventas_500k.csv p=4: arranque 3.263 s, caliente 1.535 s
+  ventas_500k.csv p=6: arranque 2.772 s, caliente 1.401 s
+  ventas_500k.csv p=12: arranque 3.897 s, caliente 0.978 s
+[Stage 81:>                                                         (0 + 7) / 7][Stage 81:========>                                                 (1 + 6) / 7][Stage 81:========================>                                 (3 + 4) / 7][Stage 81:=========================================>                (5 + 2) / 7]                                                                                  ventas_500k.csv spark: 2.325 s
+  ventas_500k.csv secuencial: 4.705 s
+Tamaño 2m
+  ventas_2m.csv p=2: arranque 14.051 s, caliente 12.252 s
+  ventas_2m.csv p=4: arranque 7.168 s, caliente 5.801 s
+  ventas_2m.csv p=6: arranque 6.557 s, caliente 4.880 s
+  ventas_2m.csv p=12: arranque 4.960 s, caliente 2.876 s
+[Stage 121:>                                                      (0 + 12) / 12][Stage 121:====>                                                  (1 + 11) / 12][Stage 121:=========>                                             (2 + 10) / 12][Stage 121:==================>                                     (4 + 8) / 12][Stage 121:=======================>                                (5 + 7) / 12][Stage 121:=====================================>                  (8 + 4) / 12]                                                                                [Stage 128:=======================>                                (5 + 7) / 12][Stage 128:=============================================>         (10 + 2) / 12]                                                                                  ventas_2m.csv spark: 2.689 s
+  ventas_2m.csv secuencial: 18.858 s
+Guardado en C:\Users\cuent\Documents\Universidad\Katherin\2026-02\Sistemas Distribuidos\Guia 9 S14\procesamiento-distribuido\evidencias\medicion_local.json
+CORRECTO: el proceso con PID 26064 (proceso secundario de PID 22656)
+ha sido terminado.
+CORRECTO: el proceso con PID 22656 (proceso secundario de PID 49488)
+ha sido terminado.
+CORRECTO: el proceso con PID 49488 (proceso secundario de PID 1216)
+ha sido terminado.

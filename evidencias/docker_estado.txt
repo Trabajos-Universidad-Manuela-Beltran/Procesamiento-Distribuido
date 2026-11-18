@@ -1,0 +1,19 @@
+# docker compose ps (2026-11-15 11:07:29)
+NAME                                IMAGE               STATUS                    PORTS
+procesamiento-distribuido-nodo1-1   procdist-nodo:1.0   Up 26 seconds (healthy)   127.0.0.1:8001->8000/tcp
+procesamiento-distribuido-nodo2-1   procdist-nodo:1.0   Up 26 seconds (healthy)   127.0.0.1:8002->8000/tcp
+procesamiento-distribuido-nodo3-1   procdist-nodo:1.0   Up 26 seconds (healthy)   127.0.0.1:8003->8000/tcp
+procesamiento-distribuido-nodo4-1   procdist-nodo:1.0   Up 26 seconds (healthy)   127.0.0.1:8004->8000/tcp
+procesamiento-distribuido-nodo5-1   procdist-nodo:1.0   Up 26 seconds (healthy)   127.0.0.1:8005->8000/tcp
+procesamiento-distribuido-nodo6-1   procdist-nodo:1.0   Up 26 seconds (healthy)   127.0.0.1:8006->8000/tcp
+
+# límites de cada nodo (docker inspect)
+/procesamiento-distribuido-nodo1-1 NanoCpus=1000000000 Memoria=536870912 Pids=100 SoloLectura=true Usuario=nodo
+/procesamiento-distribuido-nodo2-1 NanoCpus=1000000000 Memoria=536870912 Pids=100 SoloLectura=true Usuario=nodo
+/procesamiento-distribuido-nodo3-1 NanoCpus=1000000000 Memoria=536870912 Pids=100 SoloLectura=true Usuario=nodo
+/procesamiento-distribuido-nodo4-1 NanoCpus=1000000000 Memoria=536870912 Pids=100 SoloLectura=true Usuario=nodo
+/procesamiento-distribuido-nodo5-1 NanoCpus=1000000000 Memoria=536870912 Pids=100 SoloLectura=true Usuario=nodo
+/procesamiento-distribuido-nodo6-1 NanoCpus=1000000000 Memoria=536870912 Pids=100 SoloLectura=true Usuario=nodo
+
+# docker info (recursos de la máquina virtual)
+CPUs=12 Memoria=8240967680 Kernel=6.6.87.2-microsoft-standard-WSL2 Docker=29.4.1

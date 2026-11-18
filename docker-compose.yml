@@ -1,0 +1,47 @@
+# Clúster de 6 nodos trabajadores en una sola máquina (cada contenedor limitado a 1 CPU).
+# Los puertos solo escuchan en localhost; los datos se montan en modo lectura.
+x-nodo: &nodo
+  build:
+    context: .
+    dockerfile: cluster/Dockerfile
+  image: procdist-nodo:1.0
+  cpus: 1.0
+  mem_limit: 512m
+  pids_limit: 100
+  read_only: true
+  security_opt: ["no-new-privileges:true"]
+  cap_drop: ["ALL"]
+  # Cada nodo declara NOMBRE_NODO y PERMITIR_CAIDA_SIMULADA=1: la caída simulada solo existe para demostrar la tolerancia a fallas.
+  volumes:
+    - datos:/datos:ro
+
+volumes:
+  datos:  # se llena una vez con scripts/cargar_datos.ps1; leer desde el disco de Windows (bind mount) era mucho más lento
+    name: procdist_datos
+    external: true
+
+services:
+  nodo1:
+    <<: *nodo
+    environment: {NOMBRE_NODO: nodo1, PERMITIR_CAIDA_SIMULADA: "1"}
+    ports: ["127.0.0.1:8001:8000"]
+  nodo2:
+    <<: *nodo
+    environment: {NOMBRE_NODO: nodo2, PERMITIR_CAIDA_SIMULADA: "1"}
+    ports: ["127.0.0.1:8002:8000"]
+  nodo3:
+    <<: *nodo
+    environment: {NOMBRE_NODO: nodo3, PERMITIR_CAIDA_SIMULADA: "1"}
+    ports: ["127.0.0.1:8003:8000"]
+  nodo4:
+    <<: *nodo
+    environment: {NOMBRE_NODO: nodo4, PERMITIR_CAIDA_SIMULADA: "1"}
+    ports: ["127.0.0.1:8004:8000"]
+  nodo5:
+    <<: *nodo
+    environment: {NOMBRE_NODO: nodo5, PERMITIR_CAIDA_SIMULADA: "1"}
+    ports: ["127.0.0.1:8005:8000"]
+  nodo6:
+    <<: *nodo
+    environment: {NOMBRE_NODO: nodo6, PERMITIR_CAIDA_SIMULADA: "1"}
+    ports: ["127.0.0.1:8006:8000"]

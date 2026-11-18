@@ -1,0 +1,1 @@
+4 nodos, 8 particiones: 3.161 s, correcto=True

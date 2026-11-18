@@ -1,0 +1,50 @@
+Archivo: ventas_100k.csv (100.000 filas, 5.3 MB)
+
+[secuencial] 0.716 s, filas 100.000, coincide con la verdad: True
+
+Resultados parciales con 4 particiones (fase map):
+  partición rango de bytes                 filas        ingresos (COP)
+  0         0 - 1.334.228                 25.168        15.995.349.500
+  1         1.334.228 - 2.668.456         24.939        16.067.792.700
+  2         2.668.456 - 4.002.684         24.957        15.773.511.700
+  3         4.002.684 - 5.336.914         24.936        16.290.414.000
+
+Consolidación (fase reduce): 100.000 filas, ingresos 64.127.067.900 COP
+  verdad del generador:      100.000 filas, ingresos 64.127.067.900 COP
+
+[paralelo] 1.251 s con 4 procesos y 4 particiones, coincide con la verdad: True
+  aceleración Ts/Tp = 0.57 (incluye el arranque de los procesos)
+
+Ingresos por ciudad (COP):
+  Bogotá              15.497.208.000
+  Medellín             8.876.295.000
+  Cali                 7.714.902.900
+  Barranquilla         5.458.443.200
+  Cartagena            4.579.680.100
+  Bucaramanga          4.459.753.600
+  Pereira              3.985.870.700
+  Cúcuta               3.879.127.000
+  Ibagué               3.381.244.500
+  Santa Marta          3.181.482.300
+  Manizales            3.113.060.600
+
+Top 5 de productos por cantidad vendida:
+  1. Cable USB-C                      7.937 unidades
+  2. Memoria USB 64 GB                7.822 unidades
+  3. Cargador rápido                  7.751 unidades
+  4. Tarjeta SD 128 GB                7.699 unidades
+  5. Memoria USB 128 GB               7.565 unidades
+
+Ingresos por mes (COP):
+  01         4.292.837.700
+  02         3.880.036.600
+  03         4.677.215.200
+  04         4.459.312.600
+  05         4.929.391.000
+  06         6.283.450.800
+  07         5.215.010.400
+  08         4.841.281.200
+  09         4.763.423.000
+  10         5.448.706.200
+  11         6.674.871.900
+  12         8.661.531.300

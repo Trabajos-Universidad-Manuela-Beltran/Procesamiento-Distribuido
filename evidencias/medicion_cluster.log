@@ -1,0 +1,11 @@
+ventas_500k.csv 1 nodos: mediana 6.477 s
+ventas_500k.csv 2 nodos: mediana 4.338 s
+ventas_500k.csv 4 nodos: mediana 3.935 s
+ventas_500k.csv 6 nodos: mediana 3.981 s
+ventas_2m.csv 1 nodos: mediana 24.194 s
+ventas_2m.csv 2 nodos: mediana 12.783 s
+ventas_2m.csv 4 nodos: mediana 7.656 s
+ventas_2m.csv 6 nodos: mediana 7.526 s
+falla_con_reintento correcto: True ['el nodo http://127.0.0.1:8003 no respondió en la partición 3 (intento 1): RemoteProtocolError', 'el coordinador reasigna la partición 3 a otro nodo (intento 2)']
+falla_sin_reintento correcto: False ['el nodo http://127.0.0.1:8003 no respondió en la partición 3 (intento 1): RemoteProtocolError', 'la partición 3 se pierde: sin reintentos disponibles']
+Guardado en C:\Users\cuent\Documents\Universidad\Katherin\2026-02\Sistemas Distribuidos\Guia 9 S14\procesamiento-distribuido\evidencias\medicion_cluster.json

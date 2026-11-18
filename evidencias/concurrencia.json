@@ -1,0 +1,105 @@
+{
+ "fecha": "2026-11-18T12:21:32",
+ "archivo": "ventas_500k.csv",
+ "filas_esperadas": 500000,
+ "ingreso_esperado": 321569719200,
+ "procesar": [
+  {
+   "nodos": 1,
+   "solicitudes": 8,
+   "errores": [],
+   "segundos_total": 3.303089799999725,
+   "latencia_min": 1.3186214999877848,
+   "latencia_mediana": 2.2912056999921333,
+   "latencia_max": 3.2993810000189114,
+   "filas": 500000,
+   "ingreso": 321569719200,
+   "filas_por_segundo": 151373.42012319545,
+   "correcto": true
+  },
+  {
+   "nodos": 1,
+   "solicitudes": 32,
+   "errores": [],
+   "segundos_total": 5.349840800015954,
+   "latencia_min": 2.647270000015851,
+   "latencia_mediana": 4.1403539500024635,
+   "latencia_max": 4.8348182999761775,
+   "filas": 500000,
+   "ingreso": 321569719200,
+   "filas_por_segundo": 93460.72503662332,
+   "correcto": true
+  },
+  {
+   "nodos": 4,
+   "solicitudes": 8,
+   "errores": [],
+   "segundos_total": 2.0621518999978434,
+   "latencia_min": 1.584016300010262,
+   "latencia_mediana": 1.8180419499985874,
+   "latencia_max": 2.0610962999926414,
+   "filas": 500000,
+   "ingreso": 321569719200,
+   "filas_por_segundo": 242465.16466634825,
+   "correcto": true
+  },
+  {
+   "nodos": 4,
+   "solicitudes": 32,
+   "errores": [],
+   "segundos_total": 4.389733300020453,
+   "latencia_min": 2.8712634000112303,
+   "latencia_mediana": 3.4981852499913657,
+   "latencia_max": 4.367942100012442,
+   "filas": 500000,
+   "ingreso": 321569719200,
+   "filas_por_segundo": 113902.13614974523,
+   "correcto": true
+  },
+  {
+   "nodos": 4,
+   "solicitudes": 64,
+   "errores": [],
+   "segundos_total": 7.628884600009769,
+   "latencia_min": 5.627810900012264,
+   "latencia_mediana": 6.747628549986985,
+   "latencia_max": 7.437314600014361,
+   "filas": 500000,
+   "ingreso": 321569719200,
+   "filas_por_segundo": 65540.38056878718,
+   "correcto": true
+  }
+ ],
+ "salud": [
+  {
+   "solicitudes": 500,
+   "hilos": 1,
+   "fallos": 0,
+   "segundos_total": 1.6293668000143953,
+   "solicitudes_por_segundo": 306.86767399187374,
+   "latencia_mediana_ms": 2.1309500007191673,
+   "latencia_p95_ms": 3.117699990980327,
+   "latencia_max_ms": 4.2474000074435025
+  },
+  {
+   "solicitudes": 500,
+   "hilos": 10,
+   "fallos": 0,
+   "segundos_total": 1.8676195000007283,
+   "solicitudes_por_segundo": 267.72048589115985,
+   "latencia_mediana_ms": 9.24815000325907,
+   "latencia_p95_ms": 15.967699990142137,
+   "latencia_max_ms": 314.12799999816343
+  },
+  {
+   "solicitudes": 500,
+   "hilos": 50,
+   "fallos": 0,
+   "segundos_total": 5.34711299999617,
+   "solicitudes_por_segundo": 93.50840350678172,
+   "latencia_mediana_ms": 6.204900011653081,
+   "latencia_p95_ms": 24.607300001662225,
+   "latencia_max_ms": 49.42460000165738
+  }
+ ]
+}

@@ -1,0 +1,3 @@
+4 nodos, 8 particiones: 4.303 s, correcto=True
+   el nodo http://127.0.0.1:8002 no respondió en la partición 3 (intento 1): RemoteProtocolError
+   el coordinador reasigna la partición 3 a otro nodo (intento 2)

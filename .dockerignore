@@ -1,0 +1,7 @@
+.venv
+datos
+evidencias
+tests
+diagramas
+__pycache__
+.pytest_cache

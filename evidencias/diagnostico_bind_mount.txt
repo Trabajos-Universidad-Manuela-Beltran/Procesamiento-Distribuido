@@ -1,0 +1,9 @@
+Diagnóstico del 2026-11-15 (primera prueba del clúster, ventas_500k.csv, 2 nodos, 2 particiones, 1 CPU por nodo)
+
+Datos leídos desde la carpeta de Windows montada en los contenedores (bind mount):
+  2 nodos, 2 particiones: 26,646 s (resultado correcto)
+Referencia local, mismo archivo: secuencial 4,705 s (mediana de 5 corridas)
+
+Conclusión: leer el archivo línea a línea a través del montaje de la carpeta de Windows es lento en Docker Desktop.
+Se copiaron los CSV a un volumen de Docker (disco local de Linux dentro de la máquina virtual) y las mediciones
+del clúster se hicieron con ese volumen. Esta decisión se explica en el informe.
